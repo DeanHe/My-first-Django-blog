@@ -22,10 +22,10 @@
             <span class="glyphicon glyphicon-log-out" title="log out">
             </span>
         </a>
-        <p class="top-menu" id="login">Hello {{ user.username }}</p>
+        <p class="top-menu" id="login">Hello {{ request.session.profile.name }}</p>
 
         {% else %}
-        <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+        <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock" title="login"></span></a>
         {% endif %}
         <h1><a href="/">Tengda's blog</a></h1>
     </div>
